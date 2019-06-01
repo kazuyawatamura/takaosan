@@ -1,0 +1,457 @@
+@charset "UTF-8";
+
+/* ===================================================
+Basic style
+=================================================== */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500,700');
+
+html {
+  font-size: 100%;
+}
+
+/* ハンバーガーメニューを開いて背景をiOS以外スクロールさせない為のCSS */
+/* 背景スクロールを認める場合は、こちらを削除 */
+html.hidden,
+body.hidden {
+  overflow: hidden;
+  height: 100vh;
+}
+
+body {
+  color: #454545;
+  /* font-family:-apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", sans-serif; */
+}
+a {
+  color: #454545;
+  text-decoration: underline;
+}
+a:hover {
+  text-decoration: none;
+}
+
+@media screen and (min-width:768px) {
+  .wrapper {
+    width: 1080px;
+    margin: 0 auto;
+  }
+}
+
+/* ===================================================
+Header style
+=================================================== */
+.site_header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 60px;
+  background-color: #fff;
+}
+.site_header_inner {
+  position: relative;
+}
+.site_header_logo {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  font-size: 1rem;
+  width: 50%;
+}
+.site_header_logo img {
+  display: block;
+  width: 208px;
+}
+@media screen and (min-width:768px) {
+  .site_header {
+    position: static;
+    height: 104px;
+  }
+  .site_header_logo {
+    position: static;
+    padding-top: 36px;
+  }
+}
+/* ===================================================
+Main Image style
+=================================================== */
+.mainimage {
+  position: relative;
+  margin-top: 60px;
+}
+.mainimage .catchcopy {
+  position: absolute;
+  top: 23px;
+  right: 5%;
+  width: 35%;
+}
+@media screen and (min-width:768px) {
+  .mainimage {
+    margin-top: 0;
+  }
+  .mainimage .catchcopy {
+    top: 50px;
+    right: 101px;
+    width: auto;
+  }
+}
+.mainimage img {
+  vertical-align: bottom;
+}
+
+/* ===================================================
+Navigation style
+=================================================== */
+.navigation_button {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 10;
+}
+.navigation_list {
+  display: none;
+  position: fixed;
+  top: 60px;
+  left: 0;
+  z-index: 10;
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+  border-top: 1px solid #CCC;
+  background-color: rgba(255, 255, 255, .95);
+}
+.navigation_item a {
+  display: block;
+  text-decoration: none;
+  padding: 16px 0;
+  border-bottom: 1px solid #CCC;
+}
+/* 横向き時のスタイル */
+@media (orientation: landscape) and (max-width:767px) {
+  .navigation_item{
+    float: left;
+    width: 50%;
+  }
+  .navigation_item:nth-child(odd) a {
+    border-right: 1px solid #CCC;
+  }
+}
+@media screen and (min-width:768px) {
+  .navigation_button {
+    display: none;
+  }
+  .navigation_list  {
+    position: static;
+    display: flex;
+    width: auto;
+    height: auto;
+    margin-top: 40px;
+    border-top: none;
+    border-right: 2px solid #575757;
+    background-color: transparent;
+  }
+  .navigation_item {
+    flex-grow: 1;
+  }
+  .navigation_item a {
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    border-bottom: none;
+    padding: 4px 0;
+    border-left: 2px solid #575757;
+    transition: all .1s ease-out;
+  }
+  .navigation_item a:hover,
+  .navigation_item.current a {
+    color: #9aaf24;
+  }
+  .navigation_item a:hover {
+    background-color: #fafafa;
+  }
+}
+/* ===================================================
+section style
+=================================================== */
+.section {
+  padding: 56px 0;
+  margin: 0 3%;
+}
+.section_header {
+  margin-bottom: 40px;
+}
+.news .section_header  {
+  margin-bottom: 30px;
+}
+.section_header_title {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+}
+.section_header_title .title_inner {
+  position: relative;
+}
+.section_header_title .title_inner::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: 0;
+  z-index: 1;
+  width: 40px;
+  height: 4px;
+  background: linear-gradient(90deg, #c9e23f, #46e3dd);
+}
+.subscription_description {
+  line-height: 1.6;
+  margin-top: 16px;
+  padding: 0 16px;
+}
+@media screen and (min-width:768px) {
+  .section {
+    padding: 136px 0 0;
+    margin: 0;
+  }
+  .news .section_header  {
+    margin-bottom: 40px;
+  }
+  .subscription_description {
+    width: 720px;
+    margin: 40px auto 72px;
+  }
+}
+
+/* ===================================================
+News style
+=================================================== */
+.news {
+  padding-left: 24px;
+  padding-right: 24px;
+  margin-top: 56px;
+  background-color: #fafafa;
+  border: 1px solid #eee;
+}
+.news_item:not(:first-child) {
+  margin-top: 24px;
+}
+.news_item .news_time {
+  display: inline-block;
+  color: #fff;
+  font-size: 0.875rem;
+  font-weight: 500;
+  font-family: 'Montserrat', sans-serif;
+  padding: 4px 24px;
+  margin-bottom: 4px;
+  background-color: #333;
+}
+.news_title {
+  line-height: 1.6;
+}
+@media screen and (min-width:768px) {
+  .news {
+    padding: 80px 0;
+  }
+  .news_list {
+    width: 720px;
+    margin: 0 auto;
+  }
+  .news_item {
+    display: flex;
+    align-items: flex-start;
+  }
+  .news_item .news_time {
+    flex-shrink: 0;
+    text-align: center;
+    width: 130px;
+    margin-right: 40px;
+    margin-bottom: 0;
+  }
+}
+
+/* ===================================================
+Features style
+=================================================== */
+.features_content {
+  padding: 0 16px;
+}
+.features_image {
+  text-align: center;
+}
+.features_overview_title {
+  font-size: 1.5rem;
+  margin-top: 30px;
+}
+.features_overview_body {
+  line-height: 1.6;
+  margin-top: 24px;
+}
+.features_overview_body .aero888 {
+  display: block;
+  max-width: 210px;
+  margin: 0 auto 28px;
+}
+.features_overview_text:not(:last-child) {
+  margin-bottom: 24px;
+}
+
+@media screen and (min-width:768px) {
+  .features_content {
+    /* overflow: hidden; */
+    padding: 0;
+    display: flex;
+  }
+  .features_image {
+    /* float: left; */
+    width: 360px;
+    margin-right: 56px;
+    flex-shrink: 0;
+  }
+  .features_overview {
+    overflow: hidden;
+  }
+  .features_overview_title {
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 32px;
+  }
+  .features_overview_body .aero888 {
+    float: right;
+    width: 255px;
+    max-width: none;
+    margin: 0 0 0 20px;
+  }
+}
+
+/* ===================================================
+Subscription style
+=================================================== */
+.subscription_list {
+  display: flex;
+  flex-direction: column;
+}
+.subscription_item a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  border: 4px solid #c9e23f;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.2);
+  margin-bottom: 24px;
+}
+.subscription_item:last-child a {
+  margin-bottom: 0;
+}
+.subscription_item .figure {
+  margin-bottom: 16px;
+}
+.subscription_item .figure img {
+  display: block;
+  width: 100%;
+}
+.subscription_item .plan_label {
+  font-size: 1.375rem;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 8px;
+}
+.subscription_item .price {
+  font-size: 2rem;
+  font-weight: 500;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1;
+  margin-bottom: 24px;
+}
+.subscription_item .price .price_word {
+  font-size: 2.5rem;
+  margin: 0 4px 0 8px;
+}
+.subscription_item .plan_overview {
+  margin-bottom: 24px;
+}
+.subscription_item a .goto_button {
+  padding: 16px;
+  margin: 0 16px 16px;
+  background-color: #eeeeee;
+}
+@media screen and (min-width:768px) {
+  .subscription_list {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .subscription_item {
+    width: 344px;
+  }
+  .subscription_item .plan_overview,
+  .subscription_item a .goto_button {
+    font-size: 0.875rem;
+  }
+  .subscription_item a {
+    margin-bottom: 0;
+    transition: all .2s ease-out;
+  }
+  .subscription_item a:hover {
+    transform: translate3D(0, -5px, 0);
+    box-shadow: 0 7px 20px rgba(0, 0, 0, 0.15);
+  }
+  .subscription_item a:hover .goto_button {
+    background: linear-gradient(90deg, #c9e23f, #46e3dd);
+  }
+  .subscription_item a:focus {
+    transform: translate3D(0, 2px, 0);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  }
+  .subscription_item .price {
+    margin-bottom: 32px;
+  }
+  .subscription_item a .goto_button {
+    font-weight: bold;
+  }
+}
+
+/* ===================================================
+ITEMS style
+=================================================== */
+.product_list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.product_item {
+  width: 33.3333%;
+}
+/* 仕様による */
+.product_item img {
+  width: 100%;
+}
+@media screen and (min-width:768px) {
+  .product_item {
+    width: 180px;
+  }
+  .product_item a {
+    opacity: 1;
+    transition: all .2s ease-out;
+  }
+  .product_item a:hover {
+    opacity: .8;
+  }
+}
+
+/* ===================================================
+Footer style
+=================================================== */
+.footer {
+  text-align: center;
+  margin: 80px 0 28px;
+}
+.copyright {
+  display: block;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-family: 'Montserrat', sans-serif;
+}
+@media screen and (min-width:768px) {
+  .footer {
+    margin: 460px 0 20px;
+  }
+}

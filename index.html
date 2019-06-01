@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>OUTDOOR BRAND - TAKAOSAN</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/jquery-3.3.1.min.js"></script>
+    <script>
+    $(document).ready(function() {
+      $('#toggleButton').on('click', function() {
+        $(this).next().slideToggle();
+        $('html, body').toggleClass('hidden');
+      });
+    });
+    </script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="site_header">
+        <div class="site_header_inner">
+          <h1 class="site_header_logo"><img src="./assets/images/logo.svg" alt="TAKAOSANのロゴ"></h1>
+        </div>
+      </header>
+      <div class="mainimage">
+        <p class="catchcopy"><img src="./assets/images/catchcopy.png" alt="WORK HARD, PLAY HARD"></p>
+        <img src="./assets/images/mainimage.png" alt="TAKAOSANのイメージ画像">
+      </div>
+      <nav class="navigation">
+        <button id="toggleButton" class="navigation_button"><img src="./assets/images/menu.svg" alt=""></button>
+        <ul class="navigation_list">
+          <li class="navigation_item current"><a href="index.html">HOME</a></li>
+          <li class="navigation_item"><a href="about.html">ABOUT</a></li>
+          <li class="navigation_item"><a href="shop.html">SHOP</a></li>
+          <li class="navigation_item"><a href="access.html">ACCESS</a></li>
+          <li class="navigation_item"><a href="blog.html">BLOG</a></li>
+          <li class="navigation_item"><a href="contact.html">CONTACT</a></li>
+        </ul>
+      </nav>
+      <main class="mainContent">
+        <!-- News Area ▼ -->
+        <section class="section news">
+          <header class="section_header">
+            <h2 class="section_header_title"><span class="title_inner">News</span></h2>
+          </header>
+          <ul class="news_list">
+            <li class="news_item">
+              <time datetime="2018-12-17" class="news_time">2018.12.17</time>
+              <p class="news_title"><a href="#">TAKAOSANオリジナルハードシェルを限定販売いたしました。</a></p>
+            </li>
+            <li class="news_item">
+              <time datetime="2018-11-09" class="news_time">2018.11.09</time>
+              <p class="news_title"><a href="#">PFCフリー撥水剤プレゼントキャンペーン実施中</a></p>
+            </li>
+            <li class="news_item">
+              <time datetime="2018-06-30" class="news_time">2018.06.30</time>
+              <p class="news_title"><a href="#">家族参加型 雪上運動会 &amp; 山ガールコラボレーションツアーのご案内。</a></p>
+            </li>
+            <li class="news_item">
+              <time datetime="2018-03-14" class="news_time">2018.03.14</time>
+              <p class="news_title"><a href="#">TAKAOSANオンラインショップがオープンしました。オンラインクーポンを期間限定で配布中。お見逃なく！</a></p>
+            </li>
+          </ul>
+        </section>
+        <!-- News Area ▲ -->
+        <!-- Features Area ▼ -->
+        <section class="section features">
+          <header class="section_header">
+            <h2 class="section_header_title"><span class="title_inner">Features</span></h2>
+          </header>
+          <div class="features_content">
+            <div class="features_image">
+              <img src="./assets/images/features-image.jpg" alt="Featuresのイメージ画像">
+            </div>
+            <div class="features_overview">
+              <h3 class="features_overview_title">アウトドアシーンを想定された防水性</h3>
+              <div class="features_overview_body">
+                <p class="features_overview_text"><img src="./assets/images/aero888.png" alt="Aero888" class="aero888">TAKAOSANのハードウェアは、最高の素材や最高の技術・革新的なデザインを追求し続けるその姿勢から、「コストパフォーマンスという言葉は存在しない」と言い切るほど、品質に徹底的にこだわるブランド。今では各メーカーで当たり前になっている「止水ジッパー」はTAKAOSANが開発したものです。</p>
+                <p class="features_overview_text">また、一番人気といわれる「Aero888」をはじめとしたバックパックでは、表生地に"バリスティックナイロン"という強度のある撥水ナイロンを使用し、裏地にもハイパロンという耐性ゴムを使用。表と裏のWの防水で、アウトドアシーンや普段の急な雨でも安心です。</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Features Area ▲ -->
+        <!-- Subscription Area ▼ -->
+        <section class="section subscription">
+          <header class="section_header">
+            <h2 class="section_header_title"><span class="title_inner">Subscription</span></h2>
+            <p class="subscription_description">TAKAOSANオススメの商品を毎月お客様のもとにお送りする定額サービスを実施しております。初月無料なので、安心して始めることが出来ます。</p>
+          </header>
+          <ul class="subscription_list">
+            <li class="subscription_item">
+              <a href="#">
+                <div class="figure">
+                  <img src="./assets/images/subscription-starter-image.jpg" alt="スタータープランのイメージ画像">
+                </div>
+                <div class="plan_label">Starter</div>
+                <div class="price">&yen;<span class="price_word">2,400</span>/m</div>
+                <p class="plan_overview">気軽に始められるスタータープラン</p>
+                <div class="goto_button">詳しくはこちら</div>
+              </a>
+            </li>
+            <li class="subscription_item">
+              <a href="#">
+                <div class="figure">
+                  <img src="./assets/images/subscription-standard-image.jpg" alt="スタンダードプランのイメージ画像">
+                </div>
+                <div class="plan_label">Standard</div>
+                <div class="price">&yen;<span class="price_word">7,800</span>/m</div>
+                <p class="plan_overview">当店オススメのスタンダードパック</p>
+                <div class="goto_button">詳しくはこちら</div>
+              </a>
+            </li>
+            <li class="subscription_item">
+              <a href="#">
+                <div class="figure">
+                  <img src="./assets/images/subscription-master-image.jpg" alt="マスタープランのイメージ画像">
+                </div>
+                <div class="plan_label">Master</div>
+                <div class="price">&yen;<span class="price_word">16,400</span>/m</div>
+                <p class="plan_overview">ハイブランドを毎月お届けします</p>
+                <div class="goto_button">詳しくはこちら</div>
+              </a>
+            </li>
+          </ul>
+        </section>
+        <!-- Subscription Area ▲ -->
+        <!-- ITEM Area ▼ -->
+        <section class="section product">
+          <header class="section_header">
+            <h2 class="section_header_title"><span class="title_inner">ITEMS</span></h2>
+          </header>
+          <ul class="product_list">
+            <li class="product_item"><a href="#"><img src="./assets/images/items-image01.png" alt="Mountain parker"></a></li>
+            <li class="product_item"><a href="#"><img src="./assets/images/items-image02.png" alt="Mountain parker"></a></li>
+            <li class="product_item"><a href="#"><img src="./assets/images/items-image03.png" alt="Mountain parker"></a></li>
+            <li class="product_item"><a href="#"><img src="./assets/images/items-image04.png" alt="Mountain parker"></a></li>
+            <li class="product_item"><a href="#"><img src="./assets/images/items-image05.png" alt="Mountain parker"></a></li>
+            <li class="product_item"><a href="#"><img src="./assets/images/items-image06.png" alt="Mountain parker"></a></li>
+            <li class="product_item"><a href="#"><img src="./assets/images/items-image07.png" alt="Mountain parker"></a></li>
+            <li class="product_item"><a href="#"><img src="./assets/images/items-image08.png" alt="Mountain parker"></a></li>
+            <li class="product_item"><a href="#"><img src="./assets/images/items-image09.png" alt="Mountain parker"></a></li>
+            <li class="product_item"><a href="#"><img src="./assets/images/items-image10.png" alt="Mountain parker"></a></li>
+            <li class="product_item"><a href="#"><img src="./assets/images/items-image11.png" alt="Mountain parker"></a></li>
+            <li class="product_item"><a href="#"><img src="./assets/images/items-image12.png" alt="Mountain parker"></a></li>
+          </ul>
+        </section>
+        <!-- ITEM Area ▲ -->
+      </main>
+      <footer class="footer">
+        <small class="copyright">Copyright TAKAOSAN all right reserved.</small>
+      </footer>
+    </div>
+  </body>
+</html>
