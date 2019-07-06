@@ -191,19 +191,6 @@ section style
   text-transform: uppercase;
   letter-spacing: .5px;
 }
-.section_header_title .title_inner {
-  position: relative;
-}
-.section_header_title .title_inner::before {
-  content: "";
-  position: absolute;
-  top: -8px;
-  left: 0;
-  z-index: 1;
-  width: 40px;
-  height: 4px;
-  background: linear-gradient(90deg, #c9e23f, #46e3dd);
-}
 .subscription_description {
   line-height: 1.6;
   margin-top: 16px;
