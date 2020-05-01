@@ -10,8 +10,8 @@
     <script>
     $(document).ready(function() {
       $('#toggleButton').on('click', function() {
-        $(this).next().slideToggle();
-        $('html, body').toggleClass('hidden');
+        // $(this).next().slideToggle();
+        $(".navigation_list").toggleClass("active");
       });
     });
     </script>
@@ -96,7 +96,7 @@
                   <img src="./assets/images/subscription-starter-image.jpg" alt="スタータープランのイメージ画像">
                 </div>
                 <div class="plan_label">Starter</div>
-                <div class="price">&yen;<span class="price_word">2,400</span>/m</div>
+                <div class="price">¥<span class="price_word">2,400</span>/m</div>
                 <p class="plan_overview">気軽に始められるスタータープラン</p>
                 <div class="goto_button">詳しくはこちら</div>
               </a>
@@ -107,7 +107,7 @@
                   <img src="./assets/images/subscription-standard-image.jpg" alt="スタンダードプランのイメージ画像">
                 </div>
                 <div class="plan_label">Standard</div>
-                <div class="price">&yen;<span class="price_word">7,800</span>/m</div>
+                <div class="price">¥<span class="price_word">7,800</span>/m</div>
                 <p class="plan_overview">当店オススメのスタンダードパック</p>
                 <div class="goto_button">詳しくはこちら</div>
               </a>
@@ -118,7 +118,7 @@
                   <img src="./assets/images/subscription-master-image.jpg" alt="マスタープランのイメージ画像">
                 </div>
                 <div class="plan_label">Master</div>
-                <div class="price">&yen;<span class="price_word">16,400</span>/m</div>
+                <div class="price">¥<span class="price_word">16,400</span>/m</div>
                 <p class="plan_overview">ハイブランドを毎月お届けします</p>
                 <div class="goto_button">詳しくはこちら</div>
               </a>
