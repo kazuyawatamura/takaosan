@@ -6,20 +6,13 @@ Basic style
 @import url('https://fonts.googleapis.com/css?family=Montserrat:500,700');
 
 html {
-  font-size: 100%;
-}
-
-/* ハンバーガーメニューを開いて背景をiOS以外スクロールさせない為のCSS */
-/* 背景スクロールを認める場合は、こちらを削除 */
-html.hidden,
-body.hidden {
-  overflow: hidden;
-  height: 100vh;
+  font-size: 10px;
 }
 
 body {
+  font-size: 1.6rem;
   color: #454545;
-  /* font-family:-apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", sans-serif; */
+  font-family: sans-serif;
 }
 a {
   color: #454545;
@@ -29,12 +22,19 @@ a:hover {
   text-decoration: none;
 }
 
+.mainContent {
+  margin-bottom: 30px;
+}
 @media screen and (min-width:768px) {
   .wrapper {
     width: 1080px;
     margin: 0 auto;
   }
+  .mainContent {
+    margin-bottom: 100px;
+  }
 }
+
 
 /* ===================================================
 Header style
@@ -55,7 +55,6 @@ Header style
   position: absolute;
   top: 16px;
   left: 16px;
-  font-size: 1rem;
   width: 50%;
 }
 .site_header_logo img {
@@ -78,6 +77,7 @@ Main Image style
 .mainimage {
   position: relative;
   margin-top: 60px;
+  margin-bottom: 56px;
 }
 .mainimage .catchcopy {
   position: absolute;
@@ -88,6 +88,7 @@ Main Image style
 @media screen and (min-width:768px) {
   .mainimage {
     margin-top: 0;
+    margin-bottom: 28px;
   }
   .mainimage .catchcopy {
     top: 50px;
@@ -133,7 +134,7 @@ Navigation style
   border-bottom: 1px solid #CCC;
 }
 /* 横向き時のスタイル */
-@media (orientation: landscape) and (max-width:767px) {
+/* @media (orientation: landscape) and (max-width:767px) {
   .navigation_list {
     display: flex;
     flex-wrap: wrap;
@@ -159,8 +160,11 @@ Navigation style
   .navigation_item:nth-child(odd) a {
     border-right: 1px solid #CCC;
   }
-}
+} */
 @media screen and (min-width:768px) {
+  .navigation {
+    margin-bottom: 56px;
+  }
   .navigation_button {
     display: none;
   }
@@ -170,7 +174,6 @@ Navigation style
     width: auto;
     height: auto;
     opacity: 1;
-    margin-top: 40px;
     border-top: none;
     border-right: 2px solid #575757;
     background-color: transparent;
@@ -199,8 +202,7 @@ Navigation style
 section style
 =================================================== */
 .section {
-  padding: 56px 0;
-  margin: 0 3%;
+  margin: 0 3% 122px;
 }
 .section_header {
   margin-bottom: 40px;
@@ -210,7 +212,7 @@ section style
 }
 .section_header_title {
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 2.4rem;
   font-weight: 700;
   font-family: 'Montserrat', sans-serif;
   text-transform: uppercase;
@@ -226,11 +228,15 @@ section style
     padding: 136px 0 0;
     margin: 0;
   }
+  .section_header {
+    margin-bottom: 72px;
+  }
   .news .section_header  {
     margin-bottom: 40px;
   }
   .subscription_description {
     width: 720px;
+    padding: 0;
     margin: 40px auto 72px;
   }
 }
@@ -239,19 +245,23 @@ section style
 News style
 =================================================== */
 .news {
-  padding-left: 24px;
-  padding-right: 24px;
-  margin-top: 56px;
+  padding: 56px 24px;
   background-color: #fafafa;
   border: 1px solid #eee;
 }
-.news_item:not(:first-child) {
-  margin-top: 24px;
+.news_item {
+  margin-bottom: 24px;
 }
+.news_item:last-child {
+  margin-bottom: 0;
+}
+/* .news_item:not(:last-child) {
+  margin-bottom: 24px;
+} */
 .news_item .news_time {
   display: inline-block;
   color: #fff;
-  font-size: 0.875rem;
+  font-size: 1.4rem;
   font-weight: 500;
   font-family: 'Montserrat', sans-serif;
   padding: 4px 24px;
@@ -290,20 +300,21 @@ Features style
 }
 .features_image {
   text-align: center;
+  margin-bottom: 30px;
 }
 .features_overview_title {
-  font-size: 1.5rem;
-  margin-top: 30px;
+  font-weight: 600;
+  font-size: 2.4rem;
+  margin-bottom: 24px;
 }
 .features_overview_body {
   line-height: 1.6;
-  margin-top: 24px;
 }
-.features_overview_body .aero888 {
+/* .features_overview_body .aero888 {
   display: block;
   max-width: 210px;
   margin: 0 auto 28px;
-}
+} */
 .features_overview_text:not(:last-child) {
   margin-bottom: 24px;
 }
@@ -318,23 +329,22 @@ Features style
     /* float: left; */
     width: 360px;
     margin-right: 56px;
+    margin-bottom: 0;
     flex-shrink: 0;
   }
   .features_overview {
     overflow: hidden;
   }
   .features_overview_title {
-    font-weight: bold;
-    font-size: 1.5rem;
-    margin-top: 0;
+    font-size: 2.4rem;
     margin-bottom: 32px;
   }
-  .features_overview_body .aero888 {
+  /* .features_overview_body .aero888 {
     float: right;
     width: 255px;
     max-width: none;
     margin: 0 0 0 20px;
-  }
+  } */
 }
 
 /* ===================================================
@@ -356,27 +366,27 @@ Subscription style
   margin-bottom: 0;
 }
 .subscription_item .figure {
-  margin-bottom: 16px;
+  margin-bottom: 22px;
 }
 .subscription_item .figure img {
   display: block;
   width: 100%;
 }
 .subscription_item .plan_label {
-  font-size: 1.375rem;
+  font-size: 2.2rem;
   font-weight: 700;
   font-family: 'Montserrat', sans-serif;
   margin-bottom: 8px;
 }
 .subscription_item .price {
-  font-size: 2rem;
+  font-size: 3.2rem;
   font-weight: 500;
   font-family: 'Montserrat', sans-serif;
   line-height: 1;
   margin-bottom: 24px;
 }
 .subscription_item .price .price_word {
-  font-size: 2.5rem;
+  font-size: 4rem;
   margin: 0 4px 0 8px;
 }
 .subscription_item .plan_overview {
@@ -397,22 +407,28 @@ Subscription style
   }
   .subscription_item .plan_overview,
   .subscription_item a .goto_button {
-    font-size: 0.875rem;
+    font-size: 1.4rem;
   }
   .subscription_item a {
     margin-bottom: 0;
+  }
+  .subscription_item a,
+  .subscription_item a .goto_button {
     transition: all .2s ease-out;
   }
   .subscription_item a:hover {
-    transform: translate3D(0, -5px, 0);
+    transform: translateY(-5px);
     box-shadow: 0 7px 20px rgba(0, 0, 0, 0.15);
   }
   .subscription_item a:hover .goto_button {
-    background: linear-gradient(90deg, #c9e23f, #46e3dd);
+    background-color: #c9e23f;
   }
   .subscription_item a:focus {
-    transform: translate3D(0, 2px, 0);
+    transform: translateY(2px);
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  }
+  .subscription_item .figure {
+    margin-bottom: 36px;
   }
   .subscription_item .price {
     margin-bottom: 32px;
@@ -425,6 +441,9 @@ Subscription style
 /* ===================================================
 ITEMS style
 =================================================== */
+.product {
+  margin-bottom: 30px;
+}
 .product_list {
   display: flex;
   flex-wrap: wrap;
@@ -454,16 +473,17 @@ Footer style
 =================================================== */
 .footer {
   text-align: center;
-  margin: 80px 0 28px;
+  margin: 0 0 15px;
 }
 .copyright {
   display: block;
+  font-size: 1.4rem;
   text-transform: uppercase;
   font-weight: 500;
   font-family: 'Montserrat', sans-serif;
 }
 @media screen and (min-width:768px) {
   .footer {
-    margin: 460px 0 20px;
+    margin: 0 0 20px;
   }
 }
