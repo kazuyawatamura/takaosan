@@ -1,5 +1,3 @@
-@charset "UTF-8";
-
 /* ===================================================
 Basic style
 =================================================== */
@@ -259,7 +257,6 @@ News style
   margin-bottom: 24px;
 } */
 .news_item .news_time {
-  display: inline-block;
   color: #fff;
   font-size: 1.4rem;
   font-weight: 500;
