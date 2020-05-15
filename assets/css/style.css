@@ -177,7 +177,7 @@ Navigation style
     background-color: transparent;
   }
   .navigation_item {
-    flex-grow: 1;
+    width: 180px;
   }
   .navigation_item a {
     font-weight: 500;
@@ -431,7 +431,7 @@ Subscription style
     margin-bottom: 32px;
   }
   .subscription_item a .goto_button {
-    font-weight: bold;
+    font-weight: 600;
   }
 }
 
