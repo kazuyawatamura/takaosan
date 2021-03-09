@@ -4,7 +4,7 @@ Basic style
 @import url('https://fonts.googleapis.com/css?family=Montserrat:500,700');
 
 html {
-  font-size: 10px;
+  font-size: 62.5%;
 }
 
 body {
@@ -349,7 +349,10 @@ Subscription style
 =================================================== */
 .subscription_list {
   display: flex;
-  flex-direction: column;
+
+  /* 下記の2点はどちらでも構いません */
+  /* flex-direction: column; */
+  flex-wrap: wrap;
 }
 .subscription_item a {
   display: block;
